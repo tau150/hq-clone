@@ -1,0 +1,302 @@
+page-leaderboard {
+
+    // animations
+
+    @keyframes bounceIn{
+        0%{
+          opacity: 0;
+          transform: scale(0.3) translate3d(0,0,0);
+        }
+        50%{
+          opacity: 0.9;
+          transform: scale(1.1);
+        //   margin-left: 40px;
+        }
+        80%{
+          opacity: 1;
+          transform: scale(0.89);
+        //   margin-left: 20px;
+        }
+        100%{
+          opacity: 1;
+          transform: scale(1) translate3d(0,0,0);        }
+      }
+
+ 
+        @keyframes rotateInUpRight {
+        0% {
+        -webkit-transform-origin: right bottom;
+        transform-origin: right bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -90deg);
+        transform: rotate3d(0, 0, 1, -90deg);
+        opacity: 0;
+        }
+        100% {
+        -webkit-transform-origin: right bottom;
+        transform-origin: right bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+        }
+        } 
+
+      @mixin bounceIn-animation($duration){
+
+        animation-name: bounceIn;
+        animation-duration: $duration;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+
+
+      @mixin rotateInUpRight-animation($delay){
+
+        animation-name: rotateInUpRight;
+        animation-duration: $delay;
+        animation-fill-mode: both;
+      }
+      
+
+      ////
+
+
+    .main-bg{
+        background: $bg-color;
+        height: 100vh;
+        padding-top: 3%;
+
+        header{
+            display: flex;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+
+
+            h3{
+                width: 100%;
+                text-align: center;
+                margin:0;
+                padding-right: 5%;
+            }
+
+            ion-icon {
+                font-size: 30px;
+                padding-left: 5%;
+            }
+        }
+
+        .ranking-buttons{
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+
+            button{
+                width: 40%;
+                margin: 2.5%;
+                font-size: 14px;
+                font-weight: bold;
+                height: 35px;
+                border-color: $secondary-color;
+                border-width: 2px;
+                color: #fff;
+            }
+
+            button.this-week{
+                background: $pink;
+                border: $pink;
+            }
+        }
+
+        .leaders-ranking{
+            display: flex;
+            margin:5% auto;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            position: relative;
+
+            img{
+                border-radius: 50%;
+                width: 65px;
+                height: 65px;
+                opacity: 0;
+
+                @include bounceIn-animation(450ms);
+            }
+
+            span{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                top:1%;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                font-size: 15px;
+                position: absolute;
+                font-weight: bold;
+                color: #fff;
+                border-radius: 50%;
+                animation-name: rotateInUpRight;
+                animation-duration: 1.9s;
+                animation-fill-mode: both;
+            }
+
+            span.first{
+                animation-duration: 1.3s;
+            }
+            
+            span.second{
+                background: $secondary-color;
+                animation-duration: 1.5s;
+
+            }
+
+            span.third{
+                background: $pink;
+                
+            }
+
+            .leader-first{
+                margin-bottom: 15px;
+
+                span{
+                    background: $yellow;
+                    width: 35px;
+                    height: 35px;
+                    top:-5%;
+                    line-height: 35px;
+                    animation-name: rotateInUpRight;
+                    animation-duration: 1.3s;
+                    animation-fill-mode: both;
+                    animation-delay: 0.5s;
+
+                }
+
+                img{
+                    width: 80px;
+                    height: 80px;
+                    @include bounceIn-animation(0.8s);
+                    animation-delay: 0.5s;
+
+                }
+            }
+
+            p{
+                text-align: center;
+                color: #fff;
+                margin-top:3%;
+                font-weight: bold;
+                margin-bottom:0;
+                opacity: 0;
+                @include bounceIn-animation(0.8s);
+            }
+
+            .money{
+                margin-top:2%;
+                background: $secondary-color;
+                padding: 3%;
+                opacity: 0;
+                border-radius: 500px;
+                margin-top: 10%;
+                width: 60px;
+                margin-right: auto;
+                margin-left: auto;
+                @include bounceIn-animation(1s);
+                
+            }
+
+
+            .leader-first.money{
+                font-size: 20px;
+                animation-delay: 0.5s;
+            }
+
+            .leader-first p{
+                animation-delay: 0.5s;
+            }
+
+            .leader-first span{
+                animation-delay: 0.5s;
+            }
+
+
+            .leader-second img{
+                animation-delay: 0.8s;
+            }
+
+            .leader-second span{
+                animation-delay: 0.8s;
+            }
+
+
+            .leader-second p{
+                animation-delay: 0.8s;
+            }
+
+            .leader-second.money{
+                animation-delay: 0.8s;
+            }            
+
+            .leader-third img{
+                animation-delay: 1s;
+            }
+
+
+            .leader-third span{
+                animation-delay: 1s;
+            }
+
+
+            .leader-third p{
+                animation-delay: 1s;
+            }
+
+            .leader-third.money{
+                animation-delay: 1s;
+            }
+
+        }
+
+        .minor-leader{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-top: 1px solid $secondary-color;
+     
+            &:last-child{
+              border-bottom: 1px solid $secondary-color;
+            }
+            .ranking-number{
+                margin-left: 10%;
+                color: $details-color;
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-left: 4%;
+            }
+
+            .username{
+                margin-left: 3%;
+                color: #fff;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .money{
+                margin-left: auto;
+                margin-right: 10%;
+                color: #fff;
+                background: $secondary-color;
+                border-radius: 500px;
+                padding: 1% 2%;
+            }
+        }
+    }
+
+
+}

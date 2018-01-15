@@ -1,3 +1,114 @@
 page-home {
 
+    .main-bg{
+        background: #373C98;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h3{
+            margin-top: 2%;
+            color: #fff;
+            text-align: center;
+        }
+
+        img{
+            width: 70%;
+       
+        }
+
+        button{
+            margin: 0 auto;
+            margin-top: 10%;
+            padding: 7%;
+            width: 60%;
+            background: #FC4582;
+            box-shadow: none;
+        }
+
+        .circle-icon{
+            font-size: 30px;
+            color: #fff;
+            animation: circleOne 14s linear alternate infinite; 
+            position: absolute;
+            left: 315px;
+            top: 143px;
+            // opacity: 0.5;
+        }
+
+        .triangle-icon{
+            font-size: 42px;
+            color: rgb(203, 252, 69);
+            position: absolute;
+            top: 10%;
+            animation: triangleOne 10s linear alternate infinite; 
+            left: 5%;
+        }
+
+        .watch-button{
+            margin-top: 1%;
+            color: #777;
+            background: transparent;
+            border: none !important;
+            
+
+        }
+
+        .square {
+            width:100px; height:80px;  
+            border:solid 3px rgb(244, 43, 43);
+            position: absolute;
+            opacity: 0.4;
+            animation: squareOne 20s linear alternate infinite;
+        }
+
+        .curved-line{
+            width: 150%;
+            height: 200px;
+            border: 1px solid;
+            border-color: #777 transparent transparent transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 10%;
+            animation: curvedLineOne 20s linear alternate infinite;
+        }
+        
+
+    }
+
+
+    @keyframes circleOne {
+        from { transform: rotate(0deg) translateX(10px) rotate(0deg); opacity: 1 }
+        to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); opacity: 0 }
+    }
+
+    @keyframes triangleOne {
+        from { opacity: 1; transform:  translate(0px,-120%); }
+        to   { opacity: 0; transform:  translate(0px,0px); }
+    }
+
+
+    @keyframes squareOne {
+        0% {
+            transform:  translate(0px,0px)  rotate(0deg) ;
+          }
+          100% {
+            transform:  translate(600px,0px)  rotate(180deg) ;
+          }
+    }
+
+
+    @keyframes curvedLineOne {
+        from { transform: rotate(0deg) translateX(10px) rotate(0deg); opacity: 1 }
+        to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); opacity: 0 }
+        }
+
+    @keyframes dottedLine {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(360deg); }
+     }
+
+
 }

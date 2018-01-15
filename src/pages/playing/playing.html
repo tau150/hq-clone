@@ -1,0 +1,51 @@
+<div class="main-bg">
+    <div class="mask"></div>
+  <div class="playing-card">
+    
+      <div class="header-playing ">
+          <ion-icon ios="ios-person" md="md-person"> 132K</ion-icon>
+           <ion-icon ios="ios-heart-outline" md="md-heart-outline"></ion-icon>
+     
+      <div class="video-container-playing">
+          <video width="100%" controls='false' autoplay loop>
+            <source src="../../assets/videos/hq.mp4" type="video/mp4"> 
+          </video>
+      </div>
+
+      <img src="../../assets/imgs/logo.jpg" alt="">
+    </div>
+    <p class="question">
+      Which of these are you most likely yo find in a toolbox?
+    </p>
+    <ul class='options-list'>
+      <li class='first'>Hammer <span>98324</span></li>
+      <li class='second'>MC Hammer <span>24151</span></li>
+      <li class='third'>Hammerhead shark <span>9525</span></li>
+    </ul>
+  </div>
+
+  <div class="video-container">
+    <video width="100%" controls='false' autoplay loop>
+      <source src="../../assets/videos/hq.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="header-playing">
+    <ion-icon ios="ios-person" md="md-person"> 132K</ion-icon>
+     <ion-icon ios="ios-heart-outline" md="md-heart-outline"></ion-icon>
+    <img src="../../assets/imgs/logo.png" alt="">
+  </div>
+
+  <div class="chat-container">
+    <div class="user-container" *ngFor='let user of users let i= index'>
+      <img src="http://lorempixel.com/30/30/people" alt="">
+      <p class="user-name">{{user.userName}}</p>
+      <p class="user-comment">{{user.comment}}</p>
+  </div>
+
+
+   
+
+  </div>
+
+</div>

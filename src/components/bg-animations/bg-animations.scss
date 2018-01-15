@@ -1,0 +1,79 @@
+bg-animations {
+  .animations-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .circle-icon{
+        font-size: 30px;
+        color: #fff;
+        animation: circleOne 14s linear alternate infinite; 
+        position: absolute;
+        left: 315px;
+        top: 143px;
+        // opacity: 0.5;
+    }
+
+    .triangle-icon{
+        font-size: 42px;
+        color: rgb(203, 252, 69);
+        position: absolute;
+        top: 10%;
+        animation: triangleOne 10s linear alternate infinite; 
+        left: 5%;
+    }
+
+    .watch-button{
+        margin-top: 1%;
+        color: #777;
+        background: transparent;
+        border: none !important;
+        
+
+    }
+
+    .square {
+        width:100px; height:80px;  
+        border:solid 3px rgb(244, 43, 43);
+        position: absolute;
+        opacity: 0.4;
+        animation: squareOne 20s linear alternate infinite;
+    }
+
+    .curved-line{
+        width: 150%;
+        height: 200px;
+        border: 1px solid;
+        border-color: #777 transparent transparent transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: 10%;
+        animation: curvedLineOne 20s linear alternate infinite;
+    }
+
+    .dashed-circle{
+        width: 160%;
+        height: 600px;
+        border-radius: 50%;
+        border: 1px dotted;
+        border-color: #777 transparent transparent transparent;
+        position:absolute;
+        animation: dottedLine 1s linear infinite;
+        top: 40%;
+    }
+
+    .minor-dashed-circle{
+        width: 160%;
+        height: 600px;
+        border-radius: 50%;
+        border: 1px dotted;
+        border-color: #777 transparent transparent transparent;
+        position:absolute;
+        top: 43%;
+    }
+    
+  }
+   
+}

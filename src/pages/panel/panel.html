@@ -1,0 +1,52 @@
+
+<div class="main-bg">
+  <ion-icon class='circle-icon' name="add-circle"></ion-icon>      
+  <div class = "square"></div>
+  <div class="curved-line"></div>
+  <ion-icon class='triangle-icon' name="logo-angular"></ion-icon>
+
+  <header>
+    <div class="container-header-logo">
+        <img src="../../assets/imgs/logo.png" alt="" class="main-logo">
+        <p class='about-icon'>?</p>
+    </div>
+    <h3>NEXT GAME <br> <span>5pm GMT-3 <br>$2000 prize</span></h3>
+    <button ion-button outline round>Set Reminder</button>
+  </header>
+
+  <div class="user-card">
+    <div class="card-header">
+        <ion-icon class='more-icon' ios="ios-more" md="md-more"></ion-icon>
+        <ion-icon class='unknown-user-icon' name="ionitron"></ion-icon>
+        <p>You</p>
+    </div>
+    <div class="card-blocks">
+      <div class="first-block">
+        <p>BALANCE</p>
+        <P class='info'>$ 0</P>
+      </div>
+      <div class="second-block">
+        <p>WEEKLY RANK</p>
+        <p class='info'> - </p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <p class='extra-lives'>EXTRA LIVES</p>
+      <div class="heart-container">
+          <ion-icon class='heart-icon' ios="ios-heart" md="md-heart"></ion-icon>
+          <p>0</p>
+      </div>
+      <!-- <button >GET MORE</button> -->
+      <button class="get-more-button" ion-button outline round>Get More</button>
+    </div>
+  </div>
+
+  <div class="container-user-button">
+      <button class="get-more-button" ion-button outline round (click)="goToOtherPage()">Leaderboard</button>
+      <button class="get-more-button" ion-button outline round>Invite</button>
+  </div>
+
+
+</div>
+  
+

@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+$details-color: #CECCDB;
+$green: #57C795;
+$secondary-color: #6C71D4;
+$bg-color: #373C98;
+$pink: #E42563;
+$yellow: #F1C947;
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+
+}

@@ -1,17 +1,13 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-</ion-content>
+<div class="main-bg">
+  <ion-icon class='circle-icon' name="add-circle"></ion-icon>      
+  <div class = "square"></div>
+  <div class="curved-line"></div>
+  <ion-icon class='triangle-icon' name="logo-angular"></ion-icon>
+  <img src="../../assets/imgs/logo.png" alt="" class="main-logo">
+  <h3>Live trivia <br> game show</h3>
+  <button ion-button color="danger" round (click)="goToOtherPage('PlayingPage')" >Sign in to play</button>
+  <button class='watch-button' (click)="goToOtherPage('PanelPage')" ion-button >Watch as a guest</button>
+</div>
+  
+
